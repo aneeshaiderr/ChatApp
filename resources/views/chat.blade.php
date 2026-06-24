@@ -57,9 +57,7 @@
     type: 'POST',
     data:{username : $("#username").val(),msg:$('#chat_message').val()},
     success:function(result){
-       
-        
-
+       $('#chat_message').val('');
     },
     error :function(error){
         consol.log(error)
