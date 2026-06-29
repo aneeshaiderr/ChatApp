@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Events\Chat;
+use App\Models\QuickReply;
 use Illuminate\Http\Request;
 
 class chatController extends Controller
@@ -17,7 +18,8 @@ class chatController extends Controller
         'username'=>'required',
       ]);
       $username=$request->username;
-      return view('chat')->with(['name'=>$username]);
+      $quickReplies = QuickReply::all();
+      return view('chat')->with(['name'=>$username, 'quickReplies'=>$quickReplies]);
     }
     public function broadcastChat(Request $request){
       $request->validate([

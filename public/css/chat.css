@@ -1,6 +1,7 @@
-body{
-    background:#eee;    
+body {
+    background: #eee;
 }
+
 .chat-list {
     padding: 0;
     font-size: .8rem;
@@ -92,6 +93,7 @@ body{
     -moz-border-radius: 0.3rem 0.3rem 0 0;
     border-radius: 0.3rem 0.3rem 0 0;
 }
+
 .card .card-header {
     background: #17202b;
     border: 0;
@@ -102,10 +104,22 @@ body{
     color: #ffffff;
 }
 
-.content{
-    margin-top:40px;    
+.content {
+    margin-top: 40px;
 }
-.height3{
-    height:400px;
-    overflow-y:auto;
+
+.height3 {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.quick-reply-btn {
+    transition: all 0.2s ease-in-out;
+    border-width: 1.5px;
+    font-weight: 500;
+}
+
+.quick-reply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(90, 153, 238, 0.2);
 }
