@@ -1,19 +1,72 @@
-/.phpunit.cache
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+*.p12
+
+# ========================
+# Laravel Specific
+# ========================
+/vendor
 /node_modules
 /public/build
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
-.env
-.env.backup
-.env.production
+/storage/logs/*
+!storage/logs/.gitkeep
+/bootstrap/cache/*
+!bootstrap/cache/.gitkeep
+/.phpunit.cache
 .phpunit.result.cache
+
+# ========================
+# IDE & Editor Files
+# ========================
+/.fleet
+/.idea
+/.vscode
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ========================
+# OS Generated Files
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# ========================
+# Composer & NPM
+# ========================
 Homestead.json
 Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
-/.fleet
-/.idea
-/.vscode
+package-lock.json
+
+# ========================
+# Debug & Logs
+# ========================
+*.log
+/storage/debugbar
+
+# ========================
+# Database Files
+# ========================
+*.sqlite
+*.sqlite-journal
+database/*.sqlite

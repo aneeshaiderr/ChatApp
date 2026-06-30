@@ -10,20 +10,22 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class Chat implements ShouldBroadcast
+class UserTyping implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
+
     public $session_user;
     public $username;
-    public $message;
+    public $is_typing;
+
     /**
      * Create a new event instance.
      */
-    public function __construct($session_user, $username, $message)
+    public function __construct($session_user, $username, $is_typing)
     {
         $this->session_user = $session_user;
         $this->username = $username;
-        $this->message = $message;
+        $this->is_typing = $is_typing;
     }
 
     /**

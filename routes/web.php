@@ -17,3 +17,4 @@ Route::get('/',[chatController::class,'index'])->name('user.login');
 Route::post('/broadcast',[chatController::class,'broadcastChat'])->name('broadcast.chat');
 Route::get('/chat',[chatController::class,'notFound'])->name('no.chat');
 Route::post('/chat',[chatController::class,'chat'])->name('chat');
+Route::post('/broadcast-typing',[chatController::class,'broadcastTyping'])->name('broadcast.typing');
